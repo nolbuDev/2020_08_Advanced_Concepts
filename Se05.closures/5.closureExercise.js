@@ -46,7 +46,7 @@ for(let j=0; j<array.length; j++){
     }, 3000);
 }
 
-// Solution 2
+// Solution 2 : Using closure, to pass paramters
 for(var k=0; k<array.length; k++){
     (function(closureI){
         setTimeout(function(){

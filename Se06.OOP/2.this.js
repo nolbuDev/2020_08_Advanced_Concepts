@@ -37,3 +37,20 @@ const person4 = {
     }
 }
 person4.hi();
+
+//Test
+// each context
+function a(){ b(); }
+function b(){ c(); }
+function c(){ console.log(this); }
+a(); //
+
+// One context
+function a() {
+    return function b() {
+        return function c(){
+            console.log(this);
+        }
+    }
+}
+a();

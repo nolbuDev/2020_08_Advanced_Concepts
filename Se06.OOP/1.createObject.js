@@ -1,3 +1,4 @@
+// 1. Copy and paste code to create objects
 const elf = {
     name: 'Orwell',
     weapon: 'bow',
@@ -52,13 +53,16 @@ const elfFunctions = {
 
 function createElf(name, weapon){
     let newElf = Object.create(elfFunctions)
+    console.log(newElf.__proto__);
     newElf.name = name;
     newElf.weapon = weapon;
     return newElf;
 }
 
 const peter = createElf('Peter', 'stones');
+console.log(peter.attack());
 const sam = createElf('Sam', 'fire');
+console.log(sam.attack());
 
 // 5. Constructo Functions
 // new : this is created
@@ -90,7 +94,7 @@ function Elf(name, weapon){
     console.log('this', this);
     this.name = name;
     this.weapon = weapon;
-    var a = 5;
+    var a = 5;                   // this variable a is not included
     console.log('this', this);
 }
 

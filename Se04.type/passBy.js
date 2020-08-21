@@ -26,15 +26,15 @@ console.log(clone2)
 
 // Object member, Shallow Cloning
 let objMem = {a:'a', b:'b', c:{ deep: 'try and copy me'}}
-let cloneMem = Object.assign({}, obj)      // Clone
-let cloneMem2 = {...obj}                   // Spread
+let cloneMem = Object.assign({}, objMem)      // Clone
+let cloneMem2 = {...objMem}                   // Spread
 let superClone = JSON.parse(JSON.stringify(objMem));    // Deep Cloning : Using JSON
 objMem.c = 5;
 
-console.log(objMem)
-console.log(cloneMem)
-console.log(cloneMem2)
-console.log(superClone)
+console.log('objMem',objMem)
+console.log('cloneMem',cloneMem)
+console.log('cloneMem2',cloneMem2)
+console.log('superClone',superClone)
 
 // Exercise
 var user1 = {name:"nerd", org:"dev"}

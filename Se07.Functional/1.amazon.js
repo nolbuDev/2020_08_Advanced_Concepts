@@ -64,7 +64,3 @@ function emptyCart(user){
 // Bonus:
 // accept refunds.
 // track user history.
-
-function refundItem(){
-
-}

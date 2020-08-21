@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>HELLOOOOOOOOOOOOOOOOOOOOO</h1>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!--<script src='./1.modulePattern.js'></script>-->
+        <script>
+            var globalSecret = '1234';
+            var fight = 'hahaha';
+        </script>
+        <script>
+            var script2 = ($, function(gs){
+                $('h1').click(function(){
+                    $('h1').hide();
+                })
+                gs = '0';
+            })(jQuery, globalSecret)
+        </script>
+        <script type="module" src="./4.es.js"></script>
+        <script type="module">
+            import fight, { jump } from './4.es.js';
+            console.log(fight('ron', 'hedwig'))
+            console.log(jump());
+        </script>
+    </body>
+</html>

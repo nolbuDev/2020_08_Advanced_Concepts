@@ -23,9 +23,11 @@ three.call()
 // Call function 4
 // as a object using constructor with Function
 const four = new Function('num', 'return num')
-four();
+four(5);
+console.log(typeof four);
 
 function woohoo() {
     console.log('woohoo')
 }
-woohoo.yell = 'ahhhhhh'
+woohoo.yell = 'ahhhhhh';
+console.log('woohoo.yell', woohoo.yell);

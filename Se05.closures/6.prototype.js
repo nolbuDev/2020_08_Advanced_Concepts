@@ -5,7 +5,9 @@ let dragon = {
         return 5;
     },
     sing(){
-        return `I am ${this.name}, the breather of fire.`
+        if(this.fire){
+            return `I am ${this.name}, the breather of fire.`
+        }
     }
 }
 
@@ -16,15 +18,18 @@ let lizard = {
     }
 }
 
+// Method 1
 const singLizard = dragon.sing.bind(lizard)
 console.log(singLizard())
 
+// Method 2 (Not Recommended)
 lizard.__proto__ = dragon;
 console.log(lizard.sing());
 console.log(dragon.isPrototypeOf(lizard));
 
 for(let prop in lizard){
+    console.log('All', prop);
     if(lizard.hasOwnProperty(prop)){
-        console.log(prop);
+        console.log('Mine', prop);
     }
 }

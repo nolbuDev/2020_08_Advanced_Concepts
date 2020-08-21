@@ -36,7 +36,7 @@ class Elf extends Character {
         console.log(this);
     }
 }
-const fiona = new Elf('Fiona', 'ninja stars');
+const fiona = new Elf('Fiona', 'ninja stars', 'castle');
 fiona
 const dolby = new Elf('Dolby', 'cloth', 'house');
 dolby

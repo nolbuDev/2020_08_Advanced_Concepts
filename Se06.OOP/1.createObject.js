@@ -131,6 +131,11 @@ Elf.prototype.build = function(){
     return building();
 }
 
+// Solution 3
+Elf.prototype.build = function(){
+    return () => this.name + ' builds a house';
+}
+
 const peter = new Elf('Peter', 'stones');
 console.log(peter.build())
 
